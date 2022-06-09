@@ -128,8 +128,10 @@ def output_html(
         sea_read_time=sea_read_time,
     )
 
-    with open("src/index.html", "w") as f:
+    with open("./build/index.html", "w") as f:
         f.write(page)
+
+    print(f"Rendering HTML done. Date {current_date}. @ {read_time}h")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>DHMZ Weather widget</title>
+</head>
+
+<body>
+    {%- block data %}
+    <article class="widget">
+        <section class="top">
+            <div class="info">{{date}}. @ {{read_time}}h</div>
+            <div class="weather_icon">
+                <i class="wi wi-day-cloudy"></i>
+            </div>
+            <div class=info>
+                <div class="city">{{city}}</div>
+            </div>
+        </section>
+        <section class="bottom">
+            <div class="weather_data">
+                <div>
+                    <div class="weathericons air_temperature"></div>
+                        <span>Air {{ general_data.get("Temp")}}&deg;C</span>
+                </div>
+                <div>
+                    <div class="weathericons uv_index"></div>
+                        <span>UVI {{uv_index}}</span>
+                </div>
+                <div>
+                    <div class="weathericons pressure"></div>
+                        <span>Pressure {{general_data.get("Tlak")}} hPa</span>
+                </div>
+                <div>
+                    <div class="weathericons humidity"></div>
+                        <span>Humidity {{general_data.get("Vlaga")}}%</span>
+                </div>
+                <div>
+                    <div class="weathericons wind"></div>
+                        <span>Wind {{general_data.get('VjetarSmjer')}} {{general_data.get("VjetarBrzina")}}km/h</span>
+                </div>
+                <div>
+                    <div class="weathericons sea_temperature"></div>
+                        <span>Sea {{sea_temp}}&deg;C</span>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer>
+        <span>UVI last read at {{uv_read_time}}h. &nbsp;</span>
+        <span>Sea temperature last read at {{sea_read_time}}h. &nbsp;</span>
+    </footer>
+    {% endblock -%}
+</body>
+
+</html>
