@@ -1,1 +1,12 @@
-name: Fetch new data
+name: Fetch new data and build
+
+on:
+  schedule:
+    # Run at 15 mins past specified hours
+    - cron: '15 7,8,9,12,16,17 * * *'
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl request
+        run: curl -X POST -d {} NETLIFY_BUILD_HOOK

@@ -1,0 +1,3 @@
+[build]
+  command = "python current_data.py"
+  publish = ".netlify/build/"
