@@ -12,6 +12,33 @@ body {
 	--border-radius: 20px;
 }
 
+header {
+	color: whitesmoke;
+	display: grid;
+	flex-direction: column;
+	justify-content: center;
+}
+
+header p {
+	margin: 0;
+	text-align: center;
+}
+
+header a {
+	color: #0F2129;
+	text-decoration: none;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
+header a:hover {
+	color:whitesmoke;
+	-moz-transition: all 0.4s ease;
+	-webkit-transition: all 0.4s ease;
+	transition: all 0.4s ease;
+}
+
 .widget {
 	position: absolute;
 	top: 50%;
@@ -144,9 +171,17 @@ footer span {
 	width: auto;
 }
 
+.graph {
+	margin-left: 25px;
+}
 
 /* Mobiles */
 @media (max-width: 550px){
+
+	header {
+		font-size: 0.7rem;
+	}
+
 	.widget {
 		width: 300px;
 	}

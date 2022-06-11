@@ -12,12 +12,17 @@
 
 <body>
     {%- block data %}
+    <header>
+        <p>Data courtesy of <a href="https://meteo.hr">DHMZ</a></p>
+        <p>Source code at 🌱&nbsp;<a href="https://github.com/dan3sh/dhmz-widget/">DHMZ widget</a></p>
+        <p>Created by 👨‍💼&nbsp;<a href="https://www.linkedin.com/in/danielromic">in/danielromic</a></p>
+    </header>
     <article class="widget">
         <section class="top">
             <div class="info">{{date}}. @ {{read_time}}h</div>
-            <div class="weather_icon">
+            <!-- <div class="weather_icon">
                 <i class="wi wi-day-cloudy"></i>
-            </div>
+            </div> -->
             <div class=info>
                 <div class="city">{{city}}</div>
             </div>
@@ -31,6 +36,7 @@
                 <div>
                     <div class="weathericons uv_index"></div>
                         <span>UVI {{uv_index}}</span>
+                        <div class="graph">📈 </div>
                 </div>
                 <div>
                     <div class="weathericons pressure"></div>
